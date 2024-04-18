@@ -169,19 +169,19 @@ struct Logg {
 
 // MARK: - static func
 extension Logg {
-  static func error(_ message: Any, function: String = #function, filePath: String = #file, fileLine: Int = #line) {
+  static func e(_ message: Any, function: String = #function, filePath: String = #file, fileLine: Int = #line) {
     log(message, level: .error, function, filePath, fileLine)
   }
   
-  static func info(_ message: Any, function: String = #function, filePath: String = #file, fileLine: Int = #line) {
+  static func i(_ message: Any, function: String = #function, filePath: String = #file, fileLine: Int = #line) {
     log(message, level: .info, function, filePath, fileLine)
   }
   
-  static func network(_ message: Any, function: String = #function, filePath: String = #file, fileLine: Int = #line) {
+  static func net(_ message: Any, function: String = #function, filePath: String = #file, fileLine: Int = #line) {
     log(message, level: .network, function, filePath, fileLine)
   }
   
-  static func debug(_ message: Any, function: String = #function, filePath: String = #file, fileLine: Int = #line) {
+  static func d(_ message: Any, function: String = #function, filePath: String = #file, fileLine: Int = #line) {
     log(message, level: .debug, function, filePath, fileLine)
   }
   

@@ -10,6 +10,7 @@ target 'municeCowork' do
   pod 'SwiftyUserDefaults', '~> 5.0'
   pod 'SwiftDate', '~> 7.0'
   pod 'SwiftLint'
+  pod 'Moya/Combine', '~> 15.0'
 
   # Pods for municeCowork
 
