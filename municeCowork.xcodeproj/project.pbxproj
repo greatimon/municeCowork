@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FE68F62102419521E6B93A1 /* Pods_municeCowork_municeCoworkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032BEE9254A306368AC8063A /* Pods_municeCowork_municeCoworkUITests.framework */; };
-		827A23BDBFD9497A0205F619 /* Pods_municeCowork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F85E9472939FE4D13DF0871 /* Pods_municeCowork.framework */; };
+		2D59990696F2F0ED0683DA51 /* Pods_municeCowork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C75CDCACD5E33746CAC59C /* Pods_municeCowork.framework */; };
+		51E7D67201B66445C350E3CD /* Pods_municeCoworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E384CE59C12CAD4DD60C4D2 /* Pods_municeCoworkTests.framework */; };
+		844BDDCD2BD16E7F00D4E42F /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 844BDDCC2BD16E7F00D4E42F /* .swiftlint.yml */; };
 		845587FC2BD15BF900CC1F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845587FB2BD15BF900CC1F9D /* AppDelegate.swift */; };
 		845587FE2BD15BF900CC1F9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845587FD2BD15BF900CC1F9D /* SceneDelegate.swift */; };
 		845588002BD15BF900CC1F9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845587FF2BD15BF900CC1F9D /* ViewController.swift */; };
@@ -17,7 +18,7 @@
 		845588132BD15BFA00CC1F9D /* municeCoworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845588122BD15BFA00CC1F9D /* municeCoworkTests.swift */; };
 		8455881D2BD15BFA00CC1F9D /* municeCoworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455881C2BD15BFA00CC1F9D /* municeCoworkUITests.swift */; };
 		8455881F2BD15BFA00CC1F9D /* municeCoworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455881E2BD15BFA00CC1F9D /* municeCoworkUITestsLaunchTests.swift */; };
-		9AA8A04F16FEF45D6B9FA64C /* Pods_municeCoworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E839F2055934D1D4C58C09 /* Pods_municeCoworkTests.framework */; };
+		E0AA442CDF1CCD146DD55304 /* Pods_municeCowork_municeCoworkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32EA07C254EBEFB6EF8BDF9A /* Pods_municeCowork_municeCoworkUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		032BEE9254A306368AC8063A /* Pods_municeCowork_municeCoworkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_municeCowork_municeCoworkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		343C2B743313473C1D651535 /* Pods-municeCowork-municeCoworkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCowork-municeCoworkUITests.release.xcconfig"; path = "Target Support Files/Pods-municeCowork-municeCoworkUITests/Pods-municeCowork-municeCoworkUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4E5779977FF1050B2B00E6BF /* Pods-municeCowork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCowork.release.xcconfig"; path = "Target Support Files/Pods-municeCowork/Pods-municeCowork.release.xcconfig"; sourceTree = "<group>"; };
-		61E839F2055934D1D4C58C09 /* Pods_municeCoworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_municeCoworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A90BFAA5579559A004C7ED7 /* Pods-municeCoworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCoworkTests.debug.xcconfig"; path = "Target Support Files/Pods-municeCoworkTests/Pods-municeCoworkTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7361F3A042ED15B19827A558 /* Pods-municeCoworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCoworkTests.release.xcconfig"; path = "Target Support Files/Pods-municeCoworkTests/Pods-municeCoworkTests.release.xcconfig"; sourceTree = "<group>"; };
-		77ABE29B63282DDF2148746C /* Pods-municeCowork-municeCoworkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCowork-municeCoworkUITests.debug.xcconfig"; path = "Target Support Files/Pods-municeCowork-municeCoworkUITests/Pods-municeCowork-municeCoworkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E384CE59C12CAD4DD60C4D2 /* Pods_municeCoworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_municeCoworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32EA07C254EBEFB6EF8BDF9A /* Pods_municeCowork_municeCoworkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_municeCowork_municeCoworkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		473941F18B56DFBBB09F862D /* Pods-municeCowork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCowork.debug.xcconfig"; path = "Target Support Files/Pods-municeCowork/Pods-municeCowork.debug.xcconfig"; sourceTree = "<group>"; };
+		4A56ECB63BFAE91666501EFE /* Pods-municeCowork-municeCoworkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCowork-municeCoworkUITests.release.xcconfig"; path = "Target Support Files/Pods-municeCowork-municeCoworkUITests/Pods-municeCowork-municeCoworkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		61CC11F0902ACEAF78E1A4A7 /* Pods-municeCoworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCoworkTests.release.xcconfig"; path = "Target Support Files/Pods-municeCoworkTests/Pods-municeCoworkTests.release.xcconfig"; sourceTree = "<group>"; };
+		844BDDCC2BD16E7F00D4E42F /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		845587F82BD15BF900CC1F9D /* municeCowork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = municeCowork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845587FB2BD15BF900CC1F9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845587FD2BD15BF900CC1F9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,8 +57,10 @@
 		845588182BD15BFA00CC1F9D /* municeCoworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = municeCoworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8455881C2BD15BFA00CC1F9D /* municeCoworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = municeCoworkUITests.swift; sourceTree = "<group>"; };
 		8455881E2BD15BFA00CC1F9D /* municeCoworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = municeCoworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8F85E9472939FE4D13DF0871 /* Pods_municeCowork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_municeCowork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6F1C49F3619519CA4284BC1 /* Pods-municeCowork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCowork.debug.xcconfig"; path = "Target Support Files/Pods-municeCowork/Pods-municeCowork.debug.xcconfig"; sourceTree = "<group>"; };
+		8A6E46F5F12EEC2A803C89E5 /* Pods-municeCowork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCowork.release.xcconfig"; path = "Target Support Files/Pods-municeCowork/Pods-municeCowork.release.xcconfig"; sourceTree = "<group>"; };
+		997FF1080F55BD71E7D89C48 /* Pods-municeCowork-municeCoworkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCowork-municeCoworkUITests.debug.xcconfig"; path = "Target Support Files/Pods-municeCowork-municeCoworkUITests/Pods-municeCowork-municeCoworkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E6C75CDCACD5E33746CAC59C /* Pods_municeCowork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_municeCowork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7F25274A56C8846FAD0E417 /* Pods-municeCoworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCoworkTests.debug.xcconfig"; path = "Target Support Files/Pods-municeCoworkTests/Pods-municeCoworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				827A23BDBFD9497A0205F619 /* Pods_municeCowork.framework in Frameworks */,
+				2D59990696F2F0ED0683DA51 /* Pods_municeCowork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AA8A04F16FEF45D6B9FA64C /* Pods_municeCoworkTests.framework in Frameworks */,
+				51E7D67201B66445C350E3CD /* Pods_municeCoworkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FE68F62102419521E6B93A1 /* Pods_municeCowork_municeCoworkUITests.framework in Frameworks */,
+				E0AA442CDF1CCD146DD55304 /* Pods_municeCowork_municeCoworkUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +94,12 @@
 		13AC99B78F6214AD014A0F14 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F6F1C49F3619519CA4284BC1 /* Pods-municeCowork.debug.xcconfig */,
-				4E5779977FF1050B2B00E6BF /* Pods-municeCowork.release.xcconfig */,
-				77ABE29B63282DDF2148746C /* Pods-municeCowork-municeCoworkUITests.debug.xcconfig */,
-				343C2B743313473C1D651535 /* Pods-municeCowork-municeCoworkUITests.release.xcconfig */,
-				6A90BFAA5579559A004C7ED7 /* Pods-municeCoworkTests.debug.xcconfig */,
-				7361F3A042ED15B19827A558 /* Pods-municeCoworkTests.release.xcconfig */,
+				473941F18B56DFBBB09F862D /* Pods-municeCowork.debug.xcconfig */,
+				8A6E46F5F12EEC2A803C89E5 /* Pods-municeCowork.release.xcconfig */,
+				997FF1080F55BD71E7D89C48 /* Pods-municeCowork-municeCoworkUITests.debug.xcconfig */,
+				4A56ECB63BFAE91666501EFE /* Pods-municeCowork-municeCoworkUITests.release.xcconfig */,
+				E7F25274A56C8846FAD0E417 /* Pods-municeCoworkTests.debug.xcconfig */,
+				61CC11F0902ACEAF78E1A4A7 /* Pods-municeCoworkTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -142,12 +144,13 @@
 		845587EF2BD15BF900CC1F9D = {
 			isa = PBXGroup;
 			children = (
+				844BDDCC2BD16E7F00D4E42F /* .swiftlint.yml */,
 				845587FA2BD15BF900CC1F9D /* municeCowork */,
 				845588112BD15BFA00CC1F9D /* municeCoworkTests */,
 				8455881B2BD15BFA00CC1F9D /* municeCoworkUITests */,
 				845587F92BD15BF900CC1F9D /* Products */,
 				13AC99B78F6214AD014A0F14 /* Pods */,
-				D2BF0CF05EA50136966F2A62 /* Frameworks */,
+				D722CDCA79D60B596F62060E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,12 +197,12 @@
 			path = municeCoworkUITests;
 			sourceTree = "<group>";
 		};
-		D2BF0CF05EA50136966F2A62 /* Frameworks */ = {
+		D722CDCA79D60B596F62060E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F85E9472939FE4D13DF0871 /* Pods_municeCowork.framework */,
-				032BEE9254A306368AC8063A /* Pods_municeCowork_municeCoworkUITests.framework */,
-				61E839F2055934D1D4C58C09 /* Pods_municeCoworkTests.framework */,
+				E6C75CDCACD5E33746CAC59C /* Pods_municeCowork.framework */,
+				32EA07C254EBEFB6EF8BDF9A /* Pods_municeCowork_municeCoworkUITests.framework */,
+				2E384CE59C12CAD4DD60C4D2 /* Pods_municeCoworkTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -211,11 +214,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 845588222BD15BFA00CC1F9D /* Build configuration list for PBXNativeTarget "municeCowork" */;
 			buildPhases = (
-				2E8DB9EDCF6DF707F25AA5ED /* [CP] Check Pods Manifest.lock */,
+				BA300F8ABE3A3CAE2701A178 /* [CP] Check Pods Manifest.lock */,
 				845587F42BD15BF900CC1F9D /* Sources */,
 				845587F52BD15BF900CC1F9D /* Frameworks */,
 				845587F62BD15BF900CC1F9D /* Resources */,
-				C6109D7BAA0C496921BCE364 /* [CP] Embed Pods Frameworks */,
+				49A7D7D0C757582EC44EFF52 /* [CP] Embed Pods Frameworks */,
+				844BDDCE2BD16F9600D4E42F /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -230,7 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 845588252BD15BFA00CC1F9D /* Build configuration list for PBXNativeTarget "municeCoworkTests" */;
 			buildPhases = (
-				652CAFE5785916E38629791F /* [CP] Check Pods Manifest.lock */,
+				73F03011B6DD18A7B31A3A27 /* [CP] Check Pods Manifest.lock */,
 				8455880A2BD15BFA00CC1F9D /* Sources */,
 				8455880B2BD15BFA00CC1F9D /* Frameworks */,
 				8455880C2BD15BFA00CC1F9D /* Resources */,
@@ -249,11 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 845588282BD15BFA00CC1F9D /* Build configuration list for PBXNativeTarget "municeCoworkUITests" */;
 			buildPhases = (
-				C1B55F78407ED27F05352642 /* [CP] Check Pods Manifest.lock */,
+				06F30A5EDAAC977BA8AE6609 /* [CP] Check Pods Manifest.lock */,
 				845588142BD15BFA00CC1F9D /* Sources */,
 				845588152BD15BFA00CC1F9D /* Frameworks */,
 				845588162BD15BFA00CC1F9D /* Resources */,
-				459E1474D9E4B80C4D1B5280 /* [CP] Embed Pods Frameworks */,
+				AADCBB2CB341FC7767A8A7BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844BDDCD2BD16E7F00D4E42F /* .swiftlint.yml in Resources */,
 				845588082BD15BFA00CC1F9D /* LaunchScreen.storyboard in Resources */,
 				845588052BD15BFA00CC1F9D /* Assets.xcassets in Resources */,
 			);
@@ -335,68 +340,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E8DB9EDCF6DF707F25AA5ED /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-municeCowork-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		459E1474D9E4B80C4D1B5280 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-municeCowork-municeCoworkUITests/Pods-municeCowork-municeCoworkUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-municeCowork-municeCoworkUITests/Pods-municeCowork-municeCoworkUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-municeCowork-municeCoworkUITests/Pods-municeCowork-municeCoworkUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		652CAFE5785916E38629791F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-municeCoworkTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C1B55F78407ED27F05352642 /* [CP] Check Pods Manifest.lock */ = {
+		06F30A5EDAAC977BA8AE6609 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -418,7 +362,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C6109D7BAA0C496921BCE364 /* [CP] Embed Pods Frameworks */ = {
+		49A7D7D0C757582EC44EFF52 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -433,6 +377,86 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-municeCowork/Pods-municeCowork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73F03011B6DD18A7B31A3A27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-municeCoworkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		844BDDCE2BD16F9600D4E42F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		AADCBB2CB341FC7767A8A7BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-municeCowork-municeCoworkUITests/Pods-municeCowork-municeCoworkUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-municeCowork-municeCoworkUITests/Pods-municeCowork-municeCoworkUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-municeCowork-municeCoworkUITests/Pods-municeCowork-municeCoworkUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA300F8ABE3A3CAE2701A178 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-municeCowork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -615,7 +639,7 @@
 		};
 		845588232BD15BFA00CC1F9D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6F1C49F3619519CA4284BC1 /* Pods-municeCowork.debug.xcconfig */;
+			baseConfigurationReference = 473941F18B56DFBBB09F862D /* Pods-municeCowork.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -647,7 +671,7 @@
 		};
 		845588242BD15BFA00CC1F9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E5779977FF1050B2B00E6BF /* Pods-municeCowork.release.xcconfig */;
+			baseConfigurationReference = 8A6E46F5F12EEC2A803C89E5 /* Pods-municeCowork.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -679,7 +703,7 @@
 		};
 		845588262BD15BFA00CC1F9D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A90BFAA5579559A004C7ED7 /* Pods-municeCoworkTests.debug.xcconfig */;
+			baseConfigurationReference = E7F25274A56C8846FAD0E417 /* Pods-municeCoworkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -701,7 +725,7 @@
 		};
 		845588272BD15BFA00CC1F9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7361F3A042ED15B19827A558 /* Pods-municeCoworkTests.release.xcconfig */;
+			baseConfigurationReference = 61CC11F0902ACEAF78E1A4A7 /* Pods-municeCoworkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -723,7 +747,7 @@
 		};
 		845588292BD15BFA00CC1F9D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77ABE29B63282DDF2148746C /* Pods-municeCowork-municeCoworkUITests.debug.xcconfig */;
+			baseConfigurationReference = 997FF1080F55BD71E7D89C48 /* Pods-municeCowork-municeCoworkUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
@@ -743,7 +767,7 @@
 		};
 		8455882A2BD15BFA00CC1F9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 343C2B743313473C1D651535 /* Pods-municeCowork-municeCoworkUITests.release.xcconfig */;
+			baseConfigurationReference = 4A56ECB63BFAE91666501EFE /* Pods-municeCowork-municeCoworkUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;

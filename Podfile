@@ -9,6 +9,7 @@ target 'municeCowork' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'SwiftyUserDefaults', '~> 5.0'
   pod 'SwiftDate', '~> 7.0'
+  pod 'SwiftLint'
 
   # Pods for municeCowork
 
