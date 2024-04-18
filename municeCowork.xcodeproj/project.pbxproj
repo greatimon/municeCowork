@@ -10,6 +10,8 @@
 		2D59990696F2F0ED0683DA51 /* Pods_municeCowork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C75CDCACD5E33746CAC59C /* Pods_municeCowork.framework */; };
 		51E7D67201B66445C350E3CD /* Pods_municeCoworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E384CE59C12CAD4DD60C4D2 /* Pods_municeCoworkTests.framework */; };
 		844BDDCD2BD16E7F00D4E42F /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 844BDDCC2BD16E7F00D4E42F /* .swiftlint.yml */; };
+		844BDDD02BD1744F00D4E42F /* Logg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BDDCF2BD1744F00D4E42F /* Logg.swift */; };
+		844BDDD32BD174B400D4E42F /* String_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BDDD22BD174B400D4E42F /* String_Extension.swift */; };
 		845587FC2BD15BF900CC1F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845587FB2BD15BF900CC1F9D /* AppDelegate.swift */; };
 		845587FE2BD15BF900CC1F9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845587FD2BD15BF900CC1F9D /* SceneDelegate.swift */; };
 		845588002BD15BF900CC1F9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845587FF2BD15BF900CC1F9D /* ViewController.swift */; };
@@ -45,6 +47,8 @@
 		4A56ECB63BFAE91666501EFE /* Pods-municeCowork-municeCoworkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCowork-municeCoworkUITests.release.xcconfig"; path = "Target Support Files/Pods-municeCowork-municeCoworkUITests/Pods-municeCowork-municeCoworkUITests.release.xcconfig"; sourceTree = "<group>"; };
 		61CC11F0902ACEAF78E1A4A7 /* Pods-municeCoworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCoworkTests.release.xcconfig"; path = "Target Support Files/Pods-municeCoworkTests/Pods-municeCoworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		844BDDCC2BD16E7F00D4E42F /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		844BDDCF2BD1744F00D4E42F /* Logg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logg.swift; sourceTree = "<group>"; };
+		844BDDD22BD174B400D4E42F /* String_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_Extension.swift; sourceTree = "<group>"; };
 		845587F82BD15BF900CC1F9D /* municeCowork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = municeCowork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845587FB2BD15BF900CC1F9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845587FD2BD15BF900CC1F9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,8 +141,18 @@
 		844BDDCB2BD16BED00D4E42F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				844BDDD12BD174A800D4E42F /* Extension */,
+				844BDDCF2BD1744F00D4E42F /* Logg.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		844BDDD12BD174A800D4E42F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				844BDDD22BD174B400D4E42F /* String_Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		845587EF2BD15BF900CC1F9D = {
@@ -468,7 +482,9 @@
 			files = (
 				845588002BD15BF900CC1F9D /* ViewController.swift in Sources */,
 				845587FC2BD15BF900CC1F9D /* AppDelegate.swift in Sources */,
+				844BDDD02BD1744F00D4E42F /* Logg.swift in Sources */,
 				845587FE2BD15BF900CC1F9D /* SceneDelegate.swift in Sources */,
+				844BDDD32BD174B400D4E42F /* String_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
