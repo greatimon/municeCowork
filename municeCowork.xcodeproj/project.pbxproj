@@ -102,6 +102,43 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		844BDDC72BD16B9D00D4E42F /* Layer-Application */ = {
+			isa = PBXGroup;
+			children = (
+				845587FF2BD15BF900CC1F9D /* ViewController.swift */,
+			);
+			path = "Layer-Application";
+			sourceTree = "<group>";
+		};
+		844BDDC82BD16BA600D4E42F /* Layer-Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Layer-Domain";
+			sourceTree = "<group>";
+		};
+		844BDDC92BD16BAF00D4E42F /* Layer-Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Layer-Data";
+			sourceTree = "<group>";
+		};
+		844BDDCA2BD16BE500D4E42F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				845588042BD15BFA00CC1F9D /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		844BDDCB2BD16BED00D4E42F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		845587EF2BD15BF900CC1F9D = {
 			isa = PBXGroup;
 			children = (
@@ -127,10 +164,13 @@
 		845587FA2BD15BF900CC1F9D /* municeCowork */ = {
 			isa = PBXGroup;
 			children = (
+				844BDDC72BD16B9D00D4E42F /* Layer-Application */,
+				844BDDC82BD16BA600D4E42F /* Layer-Domain */,
+				844BDDC92BD16BAF00D4E42F /* Layer-Data */,
+				844BDDCA2BD16BE500D4E42F /* Resource */,
+				844BDDCB2BD16BED00D4E42F /* Util */,
 				845587FB2BD15BF900CC1F9D /* AppDelegate.swift */,
 				845587FD2BD15BF900CC1F9D /* SceneDelegate.swift */,
-				845587FF2BD15BF900CC1F9D /* ViewController.swift */,
-				845588042BD15BFA00CC1F9D /* Assets.xcassets */,
 				845588062BD15BFA00CC1F9D /* LaunchScreen.storyboard */,
 				845588092BD15BFA00CC1F9D /* Info.plist */,
 			);
