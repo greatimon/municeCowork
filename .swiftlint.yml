@@ -2,6 +2,8 @@
 disabled_rules:
   - type_name
   - trailing_whitespace
+  - identifier_name
+  - nesting
 
 # 린트 과정에 포함할 파일 경로. 이 항목이 존재하면 `--path`는 무시됨
 included:
