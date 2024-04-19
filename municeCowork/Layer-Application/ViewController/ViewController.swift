@@ -5,6 +5,8 @@ import Combine
 class ViewController: UIViewController {
   
   private lazy var dataLabel = buildDataLabel()
+  private lazy var button1 = buildButton1()
+  private lazy var button2 = buildButton2()
   
   private lazy var viewModel = TestViewModel(
     testUsecase: TestUsecaseImpl(repository: TestRepositoryImpl())
@@ -14,11 +16,54 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    view.backgroundColor = .green
+    view.backgroundColor = .black
     
     setupLayout()
     bind()
     viewModel.loadTestData()
+  }
+}
+
+// MARK: - Private Methods
+
+private extension ViewController {
+  func scheduleNotification(at date: Date) {
+    let content = UNMutableNotificationContent()
+    content.title = "Wake Up!"
+    content.body = "(Calendar) It's time to wake up!"
+    content.sound = UNNotificationSound.default
+    
+    let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+    let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+    
+    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+    
+    UNUserNotificationCenter.current().add(request) { (error) in
+      guard let error = error else {
+        Logg.d("(Calendar) Notification scheduled successfully")
+        return
+      }
+      Logg.e("(Calendar) Error scheduling notification: \(error.localizedDescription)")
+    }
+  }
+  
+  func scheduleNotificationSomeSecondsFromNow() {
+    let content = UNMutableNotificationContent()
+    content.title = "Wake Up!"
+    content.body = "(Interval) It's time to wake up!"
+    content.sound = UNNotificationSound.default
+    
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+    
+    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+    
+    UNUserNotificationCenter.current().add(request) { error in
+      guard let error = error else {
+        Logg.d("(Interval) Notification scheduled successfully")
+        return
+      }
+      Logg.e("(Interval) Error scheduling notification: \(error.localizedDescription)")
+    }
   }
 }
 
@@ -27,8 +72,20 @@ class ViewController: UIViewController {
 private extension ViewController {
   func setupLayout() {
     view.addSubview(dataLabel)
+    view.addSubview(button1)
+    view.addSubview(button2)
+    
     dataLabel.snp.makeConstraints { make in
-      make.center.equalToSuperview()
+      make.top.equalTo(view.safeAreaLayoutGuide).offset(16)
+      make.centerX.equalToSuperview()
+    }
+    button1.snp.makeConstraints { make in
+      make.top.equalTo(dataLabel.snp.bottom).offset(16)
+      make.centerX.equalToSuperview()
+    }
+    button2.snp.makeConstraints { make in
+      make.top.equalTo(button1.snp.bottom).offset(16)
+      make.centerX.equalToSuperview()
     }
   }
   
@@ -36,7 +93,7 @@ private extension ViewController {
     viewModel.testDataSubject
       .receive(on: DispatchQueue.main)
       .sink { [weak self] testData in
-        print("[체크확인] - testData.count: \(testData.count)")
+        Logg.d("testData.count: \(testData.count)")
         guard testData.count > 0 else { return }
         self?.dataLabel.text = "testData count is \(testData.count)"
       }
@@ -45,7 +102,7 @@ private extension ViewController {
     viewModel.errorSubject
       .receive(on: DispatchQueue.main)
       .sink { [weak self] error in
-        print("[체크확인] - error: \(error)")
+        Logg.e("error: \(error)")
         self?.dataLabel.text = "에러발생: \(error.localizedDescription)"
       }
       .store(in: &cancellables)
@@ -59,6 +116,28 @@ private extension ViewController {
     let result = UILabel()
     result.font = .systemFont(ofSize: 24, weight: .bold)
     result.textColor = .white
+    return result
+  }
+  
+  func buildButton1() -> UIButton {
+    let result = UIButton()
+    result.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+    result.titleLabel?.textColor = .white
+    result.setTitle("버튼1 - using Date", for: .normal)
+    result.addAction(UIAction { [weak self] _ in
+      self?.scheduleNotification(at: Date().addingTimeInterval(5))
+    }, for: .touchUpInside)
+    return result
+  }
+  
+  func buildButton2() -> UIButton {
+    let result = UIButton()
+    result.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+    result.titleLabel?.textColor = .white
+    result.setTitle("버튼2 - using TimeInterval ", for: .normal)
+    result.addAction(UIAction { [weak self] _ in
+      self?.scheduleNotificationSomeSecondsFromNow()
+    }, for: .touchUpInside)
     return result
   }
 }

@@ -25,7 +25,7 @@ extension TestViewModel {
     loadTestDataTask = Task { [weak self] in
       do {
         guard let data = try await self?.testUsecase.fetchData() else { return }
-        data.forEach { testModel in print("[체크확인] - testModel \(testModel.id) / \(testModel.title)") }
+        data.forEach { testModel in Logg.i("testModel - \(testModel.id) / \(testModel.title)") }
         self?.testDataSubject.send(data)
       } catch {
         print("Failed to load data with error: \(error)")

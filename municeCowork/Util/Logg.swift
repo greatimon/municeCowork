@@ -94,7 +94,7 @@ struct Logg {
   
   // ------------------------------------------------
   
-  private static let showMethod = false
+  private static let showMethod = true
   private static let showFileName = true
   
   private static var isEnableLog: Bool {
@@ -161,8 +161,6 @@ struct Logg {
   private static func getFileName(_ filePath: String) -> String {
     var fileName = NSURL(fileURLWithPath: filePath).lastPathComponent! as String
     fileName = fileName.replace(".swift", newString: "")
-    fileName = fileName.replace("ViewController", newString: "")
-    fileName = fileName.replace("JustForLog_Extension", newString: "")
     return fileName
   }
 }
