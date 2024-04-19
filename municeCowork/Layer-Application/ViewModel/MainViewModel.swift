@@ -13,15 +13,6 @@ final class MainViewModel {
     let timeDIffMinutes: Int
     let recommended: Bool
     
-    static var initialValue: SettingTimeInfo {
-      .init(
-        date: .init().addingTimeInterval(TimeInterval(Int.defaultSettingTimeAsSeconds)),
-        timeDiffHour: 0,
-        timeDIffMinutes: 0,
-        recommended: false
-      )
-    }
-    
     func logging() {
       Logg.d("date: \(date.toFormatString()) ----")
       Logg.d("timeDiffHour: \(timeDiffHour)")
@@ -70,7 +61,13 @@ extension MainViewModel {
   }
   
   func requestInitialData() {
-    let settingTimeInfo = createSettingTimeInfo(diffSeconds: .defaultSettingTimeAsSeconds, with: Date())
+    let currentDate: Date = .init()
+    let initialAlarmDate: Date = currentDate.addingTimeInterval(TimeInterval(Int.defaultSettingTimeAsSeconds))
+    let diff: Int = Int(initialAlarmDate.timeIntervalSince(currentDate))
+    
+    let settingTimeInfo = createSettingTimeInfo(diffSeconds: diff, with: initialAlarmDate)
+    settingTimeInfo.logging()
+
     settingTimeInfoSubject.send(settingTimeInfo)
   }
   

@@ -9,7 +9,6 @@ extension Locale {
   
   var deviceLanguage: DeviceLanguage {
     guard let languageCode = Locale.preferredLocale.languageCode?.lowercased() else { return .others }
-    Logg.i("languageCode: \(languageCode)")
     return DeviceLanguage(rawValue: languageCode) ?? .others
   }
   
