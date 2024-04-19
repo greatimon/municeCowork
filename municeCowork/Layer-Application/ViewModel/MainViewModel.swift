@@ -2,8 +2,9 @@
 import Foundation
 import Combine
 import UserNotifications
+import UIKit
 
-final class MainViewModel {
+final class MainViewModel: NSObject {
   
   // MARK: - Subtypes
   
@@ -12,18 +13,11 @@ final class MainViewModel {
     let timeDiffHour: Int
     let timeDIffMinutes: Int
     let recommended: Bool
-    
-    func logging() {
-      Logg.d("date: \(date.toFormatString()) ----")
-      Logg.d("timeDiffHour: \(timeDiffHour)")
-      Logg.d("timeDIffMinutes: \(timeDIffMinutes)")
-      Logg.d("recommended: \(recommended)")
-    }
   }
   
   // MARK: - Instance Properties
   
-  var settingTimeInfoSubject = CurrentValueSubject<SettingTimeInfo?, Never>(nil)
+  var settingTimeInfoSubject = CurrentValueSubject<(data: SettingTimeInfo, needToUpdatePicker: Bool)?, Never>(nil)
 }
 
 // MARK: - Private Methods
@@ -66,12 +60,11 @@ extension MainViewModel {
     let diff: Int = Int(initialAlarmDate.timeIntervalSince(currentDate))
     
     let settingTimeInfo = createSettingTimeInfo(diffSeconds: diff, with: initialAlarmDate)
-    settingTimeInfo.logging()
 
-    settingTimeInfoSubject.send(settingTimeInfo)
+    settingTimeInfoSubject.send((data: settingTimeInfo, needToUpdatePicker: true))
   }
   
-  func datePickerValueChanged(_ date: Date) {
+  func datePickerValueChanged(_ date: Date, needToUpdatePicker: Bool) {
     let currentDate = Date()
     let diff: Int
     if date > currentDate {
@@ -80,8 +73,28 @@ extension MainViewModel {
       diff = .oneDayAsSeconds - Int(currentDate.timeIntervalSince(date))
     }
     let settingTimeInfo = createSettingTimeInfo(diffSeconds: diff, with: date)
-    settingTimeInfo.logging()
-    settingTimeInfoSubject.send(settingTimeInfo)
+    settingTimeInfoSubject.send((data: settingTimeInfo, needToUpdatePicker: needToUpdatePicker))
+  }
+}
+
+// MARK: - TimePickerViewDelegate
+
+extension MainViewModel: TimePickerViewDelegate {
+  func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    1
+  }
+  
+  func pickerView(
+    _ pickerView: UIPickerView,
+    numberOfRowsInComponent component: Int
+  ) -> Int {
+    guard let customPickerView = pickerView as? CustomPickerView else { return .zero }
+    return customPickerView.listItem.count
+  }
+  
+  func didSelectPickerView(_ timePickerComponent: TimePickerView.TimePickerComponent) {
+    guard let date = timePickerComponent.toDate else { return }
+    datePickerValueChanged(date, needToUpdatePicker: false)
   }
 }
 

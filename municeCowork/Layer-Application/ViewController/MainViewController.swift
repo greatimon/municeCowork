@@ -11,7 +11,7 @@ final class MainViewController: UIViewController {
   private lazy var titleLabel = buildLabel()
   private lazy var subtitleLabel = buildSubtitleLabel()
   private lazy var recommendBadgeView = buildRecommendBadgeLabel()
-  private lazy var timePickerView = buildTimePickerView()
+  private lazy var timePickerView = TimePickerView(delegate: viewModel)
   private lazy var ctaButton = buildCTAButton()
   
   // MARK: - Instance Properties
@@ -73,7 +73,7 @@ private extension MainViewController {
       make.left.centerY.equalToSuperview()
     }
     timePickerView.snp.makeConstraints { make in
-      make.left.equalTo(recommendBadgeView.snp.right)
+      make.left.equalTo(recommendBadgeView.snp.right).offset(4)
       make.right.verticalEdges.equalToSuperview()
     }
     ctaButton.snp.makeConstraints { make in
@@ -87,9 +87,8 @@ private extension MainViewController {
   func bind() {
     viewModel.settingTimeInfoSubject
       .receive(on: DispatchQueue.main)
-      .sink { [weak self] settingTimeInfo in
-        guard let self, let settingTimeInfo else { return }
-        self.timePickerView.date = settingTimeInfo.date
+      .sink { [weak self] (arg) in
+        guard let self, let (settingTimeInfo, needToUpdatePicker) = arg else { return }
         self.subtitleLabel.text = String(
           format: .Res.canSleepFor,
           String(settingTimeInfo.timeDiffHour),
@@ -98,16 +97,11 @@ private extension MainViewController {
         self.recommendBadgeView.textColor = settingTimeInfo.recommended ? .primary : .g4
         self.recommendBadgeView.backgroundColor = settingTimeInfo.recommended
         ? .recommendEnableColor : .recommendDisableColor
+        
+        guard needToUpdatePicker else { return }
+        self.timePickerView.setDate(date: settingTimeInfo.date)
       }
       .store(in: &cancellables)
-  }
-}
-
-// MARK: - Target
-
-private extension MainViewController {
-  @objc func datePickerValueChanged(_ sender: UIDatePicker) {
-    viewModel.datePickerValueChanged(sender.date)
   }
 }
 
@@ -165,24 +159,6 @@ private extension MainViewController {
     return result
   }
   
-  func buildTimePickerView() -> UIDatePicker {
-    let result = UIDatePicker()
-    result.timeZone = TimeZone.current
-    result.locale = Locale.current
-    result.datePickerMode = .time
-    result.preferredDatePickerStyle = .wheels
-    result.minuteInterval = 15
-    result.isContextMenuInteractionEnabled = false
-    result.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
-//    if
-//      let selectedDateString = self.selectedDateString,
-//      selectedDateString.isNotEmpty,
-//      let selectedDate = selectedDateString.toDate {
-//      $0.date = selectedDate
-//    }
-    return result
-  }
-  
   func buildCTAButton() -> UIButton {
     let result = UIButton()
     result.layer.applyCornerRadius(12)
@@ -199,7 +175,7 @@ private extension MainViewController {
 
 // MARK: - Const
 
-private extension UIColor {
+extension UIColor {
   static let g1 = UIColor(red: 0.902, green: 0.902, blue: 0.902, alpha: 1)
   static let g4 = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
   static let subG1 = UIColor(red: 0.525, green: 0.565, blue: 0.612, alpha: 1)

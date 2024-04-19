@@ -54,7 +54,6 @@ extension TestViewModel {
 extension TestViewModel {
   func applyData(_ dataItemList: [TestDataItem], animatingDifferences: Bool) async {
     await MainActor.run {
-      Logg.d("dataItemList.count: \(dataItemList.count)")
       var snapshot = NSDiffableDataSourceSnapshot<ListSectionType, TestDataItem>()
       snapshot.appendSections([.testData])
       snapshot.appendItems(dataItemList, toSection: .testData)

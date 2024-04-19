@@ -38,6 +38,9 @@
 		8455881D2BD15BFA00CC1F9D /* municeCoworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455881C2BD15BFA00CC1F9D /* municeCoworkUITests.swift */; };
 		8455881F2BD15BFA00CC1F9D /* municeCoworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455881E2BD15BFA00CC1F9D /* municeCoworkUITestsLaunchTests.swift */; };
 		84CF48002BD25326004ED912 /* Locale_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF47FF2BD25326004ED912 /* Locale_Extension.swift */; };
+		84CF48022BD25CA8004ED912 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF48012BD25CA8004ED912 /* TimePickerView.swift */; };
+		84CF48042BD26327004ED912 /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF48032BD26327004ED912 /* CustomPickerView.swift */; };
+		84CF48062BD263C3004ED912 /* Array_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF48052BD263C3004ED912 /* Array_Extension.swift */; };
 		BC868E4BFE131C246119C880 /* Pods_municeCowork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8FBD6BD92A206E5BA973C3 /* Pods_municeCowork.framework */; };
 		F93CD258C403FFBAD690FB28 /* Pods_municeCoworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E67D8E14E6A5239F968A563 /* Pods_municeCoworkTests.framework */; };
 /* End PBXBuildFile section */
@@ -99,6 +102,9 @@
 		8455881C2BD15BFA00CC1F9D /* municeCoworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = municeCoworkUITests.swift; sourceTree = "<group>"; };
 		8455881E2BD15BFA00CC1F9D /* municeCoworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = municeCoworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		84CF47FF2BD25326004ED912 /* Locale_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locale_Extension.swift; sourceTree = "<group>"; };
+		84CF48012BD25CA8004ED912 /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		84CF48032BD26327004ED912 /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
+		84CF48052BD263C3004ED912 /* Array_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array_Extension.swift; sourceTree = "<group>"; };
 		8D8FBD6BD92A206E5BA973C3 /* Pods_municeCowork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_municeCowork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9136DBC612E5E139352DCF03 /* Pods-municeCowork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCowork.debug.xcconfig"; path = "Target Support Files/Pods-municeCowork/Pods-municeCowork.debug.xcconfig"; sourceTree = "<group>"; };
 		BFFB9BCE9D1630F637128243 /* Pods_municeCowork_municeCoworkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_municeCowork_municeCoworkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +216,7 @@
 				844BDE082BD239AB00D4E42F /* CALayer_Extension.swift */,
 				844BDE0C2BD2443900D4E42F /* Date_Extension.swift */,
 				84CF47FF2BD25326004ED912 /* Locale_Extension.swift */,
+				84CF48052BD263C3004ED912 /* Array_Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -298,6 +305,8 @@
 			isa = PBXGroup;
 			children = (
 				844BDDFB2BD1FA4500D4E42F /* ListCell */,
+				84CF48012BD25CA8004ED912 /* TimePickerView.swift */,
+				84CF48032BD26327004ED912 /* CustomPickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -645,6 +654,7 @@
 				845588002BD15BF900CC1F9D /* ViewController.swift in Sources */,
 				845587FC2BD15BF900CC1F9D /* AppDelegate.swift in Sources */,
 				844BDDEA2BD1854A00D4E42F /* TestRepository.swift in Sources */,
+				84CF48062BD263C3004ED912 /* Array_Extension.swift in Sources */,
 				844BDDDF2BD1794700D4E42F /* BaseApi.swift in Sources */,
 				844BDDFF2BD1FA6800D4E42F /* ReuseIdentifierable.swift in Sources */,
 				844BDDD92BD1776600D4E42F /* NetConsts.swift in Sources */,
@@ -662,8 +672,10 @@
 				844BDDE42BD17C0B00D4E42F /* TestApiDTO.swift in Sources */,
 				844BDDFD2BD1FA4E00D4E42F /* TestCell.swift in Sources */,
 				844BDE052BD1FCB400D4E42F /* TestDataItem.swift in Sources */,
+				84CF48042BD26327004ED912 /* CustomPickerView.swift in Sources */,
 				844BDE092BD239AB00D4E42F /* CALayer_Extension.swift in Sources */,
 				844BDE072BD235AD00D4E42F /* MainViewController.swift in Sources */,
+				84CF48022BD25CA8004ED912 /* TimePickerView.swift in Sources */,
 				844BDE0B2BD243AD00D4E42F /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
