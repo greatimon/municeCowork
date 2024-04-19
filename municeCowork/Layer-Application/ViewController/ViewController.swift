@@ -48,16 +48,28 @@ private extension ViewController {
   }
   
   func scheduleNotificationSomeSecondsFromNow() {
+    let notificationCenter = UNUserNotificationCenter.current()
+    
     let content = UNMutableNotificationContent()
     content.title = "Wake Up!"
     content.body = "(Interval) It's time to wake up!"
     content.sound = UNNotificationSound.default
     
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+    content.categoryIdentifier = "meetingCategory"
+    let action1 = UNNotificationAction(identifier: "snoozeAction", title: "Snooze", options: [])
+    let action2 = UNNotificationAction(identifier: "cancelAction", title: "Cancel", options: [.destructive])
+    let category = UNNotificationCategory(
+      identifier: "(some)Category",
+      actions: [action1, action2],
+      intentIdentifiers: [],
+      options: []
+    )
+    notificationCenter.setNotificationCategories([category])
     
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 7, repeats: false)
     let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
     
-    UNUserNotificationCenter.current().add(request) { error in
+    notificationCenter.add(request) { error in
       guard let error = error else {
         Logg.d("(Interval) Notification scheduled successfully")
         return

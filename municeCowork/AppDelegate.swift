@@ -62,6 +62,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     willPresent notification: UNNotification,
     withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
   ) {
+    Logg.i("willPresent")
     completionHandler([.list, .banner, .badge, .sound])
   }
   
@@ -71,6 +72,16 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     didReceive response: UNNotificationResponse,
     withCompletionHandler completionHandler: @escaping () -> Void
   ) {
+    Logg.i("didReceive - response.actionIdentifier: \(response.actionIdentifier)")
+    switch response.actionIdentifier {
+    case "snoozeAction":
+      break
+    case "cancelAction":
+      break
+    default:
+      break
+    }
+    
     completionHandler()
   }
 }
