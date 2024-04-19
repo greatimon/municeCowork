@@ -25,6 +25,10 @@
 		844BDDFD2BD1FA4E00D4E42F /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BDDFC2BD1FA4E00D4E42F /* TestCell.swift */; };
 		844BDDFF2BD1FA6800D4E42F /* ReuseIdentifierable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BDDFE2BD1FA6800D4E42F /* ReuseIdentifierable.swift */; };
 		844BDE052BD1FCB400D4E42F /* TestDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BDE042BD1FCB400D4E42F /* TestDataItem.swift */; };
+		844BDE072BD235AD00D4E42F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BDE062BD235AD00D4E42F /* MainViewController.swift */; };
+		844BDE092BD239AB00D4E42F /* CALayer_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BDE082BD239AB00D4E42F /* CALayer_Extension.swift */; };
+		844BDE0B2BD243AD00D4E42F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BDE0A2BD243AD00D4E42F /* MainViewModel.swift */; };
+		844BDE0D2BD2443900D4E42F /* Date_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BDE0C2BD2443900D4E42F /* Date_Extension.swift */; };
 		845587FC2BD15BF900CC1F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845587FB2BD15BF900CC1F9D /* AppDelegate.swift */; };
 		845587FE2BD15BF900CC1F9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845587FD2BD15BF900CC1F9D /* SceneDelegate.swift */; };
 		845588002BD15BF900CC1F9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845587FF2BD15BF900CC1F9D /* ViewController.swift */; };
@@ -33,6 +37,7 @@
 		845588132BD15BFA00CC1F9D /* municeCoworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845588122BD15BFA00CC1F9D /* municeCoworkTests.swift */; };
 		8455881D2BD15BFA00CC1F9D /* municeCoworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455881C2BD15BFA00CC1F9D /* municeCoworkUITests.swift */; };
 		8455881F2BD15BFA00CC1F9D /* municeCoworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455881E2BD15BFA00CC1F9D /* municeCoworkUITestsLaunchTests.swift */; };
+		84CF48002BD25326004ED912 /* Locale_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF47FF2BD25326004ED912 /* Locale_Extension.swift */; };
 		BC868E4BFE131C246119C880 /* Pods_municeCowork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8FBD6BD92A206E5BA973C3 /* Pods_municeCowork.framework */; };
 		F93CD258C403FFBAD690FB28 /* Pods_municeCoworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E67D8E14E6A5239F968A563 /* Pods_municeCoworkTests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +82,10 @@
 		844BDDFC2BD1FA4E00D4E42F /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
 		844BDDFE2BD1FA6800D4E42F /* ReuseIdentifierable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierable.swift; sourceTree = "<group>"; };
 		844BDE042BD1FCB400D4E42F /* TestDataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataItem.swift; sourceTree = "<group>"; };
+		844BDE062BD235AD00D4E42F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		844BDE082BD239AB00D4E42F /* CALayer_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer_Extension.swift; sourceTree = "<group>"; };
+		844BDE0A2BD243AD00D4E42F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		844BDE0C2BD2443900D4E42F /* Date_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date_Extension.swift; sourceTree = "<group>"; };
 		845587F82BD15BF900CC1F9D /* municeCowork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = municeCowork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845587FB2BD15BF900CC1F9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845587FD2BD15BF900CC1F9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +98,7 @@
 		845588182BD15BFA00CC1F9D /* municeCoworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = municeCoworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8455881C2BD15BFA00CC1F9D /* municeCoworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = municeCoworkUITests.swift; sourceTree = "<group>"; };
 		8455881E2BD15BFA00CC1F9D /* municeCoworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = municeCoworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84CF47FF2BD25326004ED912 /* Locale_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locale_Extension.swift; sourceTree = "<group>"; };
 		8D8FBD6BD92A206E5BA973C3 /* Pods_municeCowork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_municeCowork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9136DBC612E5E139352DCF03 /* Pods-municeCowork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-municeCowork.debug.xcconfig"; path = "Target Support Files/Pods-municeCowork/Pods-municeCowork.debug.xcconfig"; sourceTree = "<group>"; };
 		BFFB9BCE9D1630F637128243 /* Pods_municeCowork_municeCoworkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_municeCowork_municeCoworkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				844BDDD22BD174B400D4E42F /* String_Extension.swift */,
+				844BDE082BD239AB00D4E42F /* CALayer_Extension.swift */,
+				844BDE0C2BD2443900D4E42F /* Date_Extension.swift */,
+				84CF47FF2BD25326004ED912 /* Locale_Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -267,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				845587FF2BD15BF900CC1F9D /* ViewController.swift */,
+				844BDE062BD235AD00D4E42F /* MainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -275,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				844BDDF72BD1893600D4E42F /* TestViewModel.swift */,
+				844BDE0A2BD243AD00D4E42F /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -638,6 +653,8 @@
 				844BDDDB2BD1778600D4E42F /* RequestCustomLogPlugin.swift in Sources */,
 				844BDDE12BD17AAB00D4E42F /* TestApi.swift in Sources */,
 				845587FE2BD15BF900CC1F9D /* SceneDelegate.swift in Sources */,
+				844BDE0D2BD2443900D4E42F /* Date_Extension.swift in Sources */,
+				84CF48002BD25326004ED912 /* Locale_Extension.swift in Sources */,
 				844BDDF82BD1893600D4E42F /* TestViewModel.swift in Sources */,
 				844BDDF22BD186C400D4E42F /* TestModel.swift in Sources */,
 				844BDDD72BD1774600D4E42F /* MoyaRequester.swift in Sources */,
@@ -645,6 +662,9 @@
 				844BDDE42BD17C0B00D4E42F /* TestApiDTO.swift in Sources */,
 				844BDDFD2BD1FA4E00D4E42F /* TestCell.swift in Sources */,
 				844BDE052BD1FCB400D4E42F /* TestDataItem.swift in Sources */,
+				844BDE092BD239AB00D4E42F /* CALayer_Extension.swift in Sources */,
+				844BDE072BD235AD00D4E42F /* MainViewController.swift in Sources */,
+				844BDE0B2BD243AD00D4E42F /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
