@@ -4,12 +4,21 @@ import Combine
 
 class ViewController: UIViewController {
   
+  // MARK: - Subtypes
+  
+  enum ListSectionType: Hashable {
+    case testData
+  }
+  
   private lazy var dataLabel = buildDataLabel()
   private lazy var button1 = buildButton1()
   private lazy var button2 = buildButton2()
+  private lazy var dividerView = buildDividerView()
+  private lazy var collectionView = buildCollectionView()
   
   private lazy var viewModel = TestViewModel(
-    testUsecase: TestUsecaseImpl(repository: TestRepositoryImpl())
+    testUsecase: TestUsecaseImpl(repository: TestRepositoryImpl()),
+    testItemDataSource: makeDiffableDataSource(collectionView: collectionView)
   )
   private var cancellables: Set<AnyCancellable> = .init()
   
@@ -77,27 +86,106 @@ private extension ViewController {
       Logg.e("(Interval) Error scheduling notification: \(error.localizedDescription)")
     }
   }
+  
+  func makeCompositionalLayout() -> UICollectionViewCompositionalLayout {
+    let configuration: UICollectionViewCompositionalLayoutConfiguration = .init()
+    configuration.scrollDirection = .vertical
+
+    return UICollectionViewCompositionalLayout(
+      sectionProvider: { [weak self] index, _ in
+        guard
+          let snapshot = self?.viewModel.snapshot,
+          snapshot.numberOfSections >= index + 1
+        else { return nil }
+        return snapshot.sectionIdentifiers[index].section
+      },
+      configuration: configuration
+    )
+  }
+  
+  func makeDiffableDataSource(
+    collectionView: UICollectionView
+  ) -> UICollectionViewDiffableDataSource<ListSectionType, TestDataItem> {
+    .init(collectionView: collectionView) { collectionView, indexPath, itemIdentifier in
+      switch itemIdentifier {
+      case .testData(let testData):
+        let cell = collectionView.dequeueReusableCell(
+          withReuseIdentifier: TestCell.reuseID,
+          for: indexPath
+        ) as? TestCell
+        cell?.configure(testData: testData)
+        return cell
+      }
+    }
+  }
+}
+
+// MARK: - MyBrandKitsViewController.ListSectionType
+
+private extension ViewController.ListSectionType {
+  var item: NSCollectionLayoutItem {
+    switch self {
+    case .testData:
+      let itemSize = NSCollectionLayoutSize(
+        widthDimension: .fractionalWidth(1),
+        heightDimension: .absolute(.testCellHeight)
+      )
+      return NSCollectionLayoutItem(layoutSize: itemSize)
+    }
+  }
+  
+  var group: NSCollectionLayoutGroup {
+    switch self {
+    case .testData:
+      let groupSize = NSCollectionLayoutSize(
+        widthDimension: .fractionalWidth(1),
+        heightDimension: .estimated(.testCellHeight)
+      )
+      return NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 1)
+    }
+  }
+  
+  var section: NSCollectionLayoutSection {
+    let section = NSCollectionLayoutSection(group: group)
+    switch self {
+    case .testData:
+      section.contentInsets = .init(top: 16, leading: 20, bottom: 16, trailing: 20)
+    }
+    return section
+  }
 }
 
 // MARK: - Setup
 
 private extension ViewController {
   func setupLayout() {
-    view.addSubview(dataLabel)
     view.addSubview(button1)
     view.addSubview(button2)
+    view.addSubview(dividerView)
+    view.addSubview(dataLabel)
+    view.addSubview(collectionView)
     
-    dataLabel.snp.makeConstraints { make in
-      make.top.equalTo(view.safeAreaLayoutGuide).offset(16)
-      make.centerX.equalToSuperview()
-    }
     button1.snp.makeConstraints { make in
-      make.top.equalTo(dataLabel.snp.bottom).offset(16)
+      make.top.equalTo(view.safeAreaLayoutGuide).offset(24)
       make.centerX.equalToSuperview()
     }
     button2.snp.makeConstraints { make in
       make.top.equalTo(button1.snp.bottom).offset(16)
       make.centerX.equalToSuperview()
+    }
+    dividerView.snp.makeConstraints { make in
+      make.height.equalTo(6)
+      make.horizontalEdges.equalToSuperview().inset(8)
+      make.top.equalTo(button2.snp.bottom).offset(32)
+    }
+    dataLabel.snp.makeConstraints { make in
+      make.top.equalTo(dividerView.snp.bottom).offset(32)
+      make.centerX.equalToSuperview()
+    }
+    collectionView.snp.makeConstraints { make in
+      make.top.equalTo(dataLabel.snp.bottom).offset(16)
+      make.horizontalEdges.equalToSuperview()
+      make.bottom.equalTo(view.safeAreaLayoutGuide)
     }
   }
   
@@ -152,4 +240,23 @@ private extension ViewController {
     }, for: .touchUpInside)
     return result
   }
+  
+  func buildDividerView() -> UIView {
+    let result = UIView()
+    result.backgroundColor = .white
+    return result
+  }
+  
+  func buildCollectionView() -> UICollectionView {
+    let result = UICollectionView(frame: .zero, collectionViewLayout: makeCompositionalLayout())
+    result.backgroundColor = .black
+    result.register(TestCell.self, forCellWithReuseIdentifier: TestCell.reuseID)
+    return result
+  }
+}
+
+// MARK: - Const
+
+private extension CGFloat {
+  static let testCellHeight: CGFloat = 60
 }

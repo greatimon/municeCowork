@@ -6,7 +6,7 @@ target 'municeCowork' do
   use_frameworks!
   inhibit_all_warnings! # make invisible library build warning when xcode build
 
-  pod 'SnapKit', '~> 5.0.0'
+  pod 'SnapKit', '~> 5.6.0'
   pod 'SwiftyUserDefaults', '~> 5.0'
   pod 'SwiftDate', '~> 7.0'
   pod 'SwiftLint'
