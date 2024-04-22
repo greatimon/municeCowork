@@ -156,7 +156,7 @@ private extension TimePickerView {
     }
     
     hourPickerView.snp.makeConstraints { make in
-      make.width.lessThanOrEqualTo(61)
+      make.width.lessThanOrEqualTo(75)
       make.height.equalTo(CGFloat.pickerViewHeight)
       make.left.equalToSuperview().inset(CGFloat.leftMargin)
       make.verticalEdges.equalToSuperview().inset(CGFloat.verticalMargin)
@@ -166,13 +166,13 @@ private extension TimePickerView {
       make.centerY.equalToSuperview().offset(-3)
     }
     minutesPickerView.snp.makeConstraints { make in
-      make.width.lessThanOrEqualTo(61)
+      make.width.lessThanOrEqualTo(75)
       make.height.equalTo(CGFloat.pickerViewHeight)
       make.left.equalTo(commaLabel.snp.right).offset(12)
       make.verticalEdges.equalToSuperview().inset(CGFloat.verticalMargin)
     }
     amPmPickerView.snp.makeConstraints { make in
-      make.width.lessThanOrEqualTo(56)
+      make.width.lessThanOrEqualTo(70)
       make.height.equalTo(CGFloat.pickerViewHeight)
       make.left.equalTo(minutesPickerView.snp.right).offset(18.4)
       make.verticalEdges.equalToSuperview().inset(CGFloat.verticalMargin)
@@ -226,6 +226,7 @@ extension TimePickerView: UIPickerViewDelegate {
       label.font = .systemFont(ofSize: 32.22, weight: .medium)
     }
     
+    label.textColor = .g1
     label.text = item
     label.textAlignment = .center
     label.sizeToFit()
