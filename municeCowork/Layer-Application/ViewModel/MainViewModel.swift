@@ -66,11 +66,9 @@ extension MainViewModel {
   
   func datePickerValueChanged(_ date: Date, needToUpdatePicker: Bool) {
     let currentDate = Date()
-    let diff: Int
-    if date > currentDate {
-      diff = Int(date.timeIntervalSince(currentDate))
-    } else {
-      diff = .oneDayAsSeconds - Int(currentDate.timeIntervalSince(date))
+    var diff: Int = Int(date.timeIntervalSince(currentDate))
+    if diff > .oneDayAsSeconds {
+      diff -= .oneDayAsSeconds
     }
     let settingTimeInfo = createSettingTimeInfo(diffSeconds: diff, with: date)
     settingTimeInfoSubject.send((data: settingTimeInfo, needToUpdatePicker: needToUpdatePicker))
